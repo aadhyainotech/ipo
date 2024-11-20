@@ -1,8 +1,7 @@
 const ObjectId = require("mongodb").ObjectId;
-import Message from "../../utils/messages";
-import dbService from "../../utils/dbService";
-const fs = require('fs');
-
+const dbService = require("../../utils/dbService");
+const Message = require("../../utils/messages");
+const fs = require("fs");
 
 const deleteFont = async (antry) => {
   try {
@@ -26,8 +25,6 @@ const deleteFont = async (antry) => {
 
     let updateData = { isDeleted: true };
 
-
-
     let frameDelete = await dbService.findOneAndUpdateRecord(
       "FontModel",
       condition,
@@ -38,9 +35,6 @@ const deleteFont = async (antry) => {
     );
 
     if (!frameDelete) throw new Error(Message.recordNotFound);
-
-
-
 
     fs.unlink(`public/${frameDelete.vFontUrl}`, function (err) {
       //Do whatever else you need to do here
