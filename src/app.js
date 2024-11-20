@@ -36,7 +36,7 @@ app.use(
 );
 
 // app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static("public"));
+app.use(express.static("./public"));
 app.use("/api", routes);
 
 app.use((err, req, res, next) => {
@@ -57,5 +57,3 @@ app.get("/", (req, res) =>
 app.listen(port, function () {
   console.log(`Express server listening on port ${port}`);
 });
-
-
