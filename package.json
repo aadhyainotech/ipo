@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node":"20.x"
+  },
   "scripts": {
     "start": "npm run build && nodemon ./dist/app.js",
     "start:dev": "nodemon --exec babel-node ./src/app.js",
@@ -10,6 +13,7 @@
     "build-babel": "babel ./src --out-dir dist --copy-files",
     "build": "npm run clean && npm run build-babel"
   },
+
   "keywords": [],
   "author": "",
   "dependencies": {
