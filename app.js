@@ -9,13 +9,3 @@ var server = http.createServer(function (req, res) {
 server.listen();
 
 
-
-
-res.redirect('/src');
-
-
-
-
-
-
-
