@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "engines": {
-    "node":"20.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "npm run build && nodemon ./dist/app.js",
@@ -13,7 +13,6 @@
     "build-babel": "babel ./src --out-dir dist --copy-files",
     "build": "npm run clean && npm run build-babel"
   },
-
   "keywords": [],
   "author": "",
   "dependencies": {
@@ -37,6 +36,8 @@
     "mongoose": "^5.13.21",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
+    "nodejs": "^0.0.0",
+    "nvm": "^0.0.4",
     "path": "^0.12.7",
     "request": "^2.88.2",
     "winston": "^3.11.0"
